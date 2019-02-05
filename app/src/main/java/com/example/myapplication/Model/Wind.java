@@ -2,25 +2,25 @@ package com.example.myapplication.Model;
 
 public class Wind {
 
-    private double speed;
-    private int deg;
+    private float speed;
+    private float deg;
 
     public Wind() {
     }
 
-    public double getSpeed() {
+    public float getSpeed() {
         return speed;
     }
 
-    public void setSpeed(double speed) {
+    public void setSpeed(float speed) {
         this.speed = speed;
     }
 
-    public int getDeg() {
+    public float getDeg() {
         return deg;
     }
 
-    public void setDeg(int deg) {
+    public void setDeg(float deg) {
         this.deg = deg;
     }
 }
