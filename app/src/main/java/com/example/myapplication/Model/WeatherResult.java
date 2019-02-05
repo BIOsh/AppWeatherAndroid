@@ -5,9 +5,9 @@ import java.util.List;
 public class WeatherResult {
 
     private Coord coord;
-    private List<Weather> weather;
+    private static List<Weather> weather;
     private String base;
-    private Main main;
+    private static Main main;
     private Wind wind;
     private Clouds clouds;
     private int dt;
@@ -27,7 +27,7 @@ public class WeatherResult {
         this.coord = coord;
     }
 
-    public List<Weather> getWeather() {
+    public static List<Weather> getWeather() {
         return weather;
     }
 
@@ -43,7 +43,7 @@ public class WeatherResult {
         this.base = base;
     }
 
-    public Main getMain() {
+    public static Main getMain() {
         return main;
     }
 
