@@ -13,13 +13,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.myapplication.Common.Common;
-import com.example.myapplication.Model.Weather;
 import com.example.myapplication.Model.WeatherResult;
 import com.example.myapplication.Retrofit.IOpenWeatherMap;
 import com.example.myapplication.Retrofit.RetrofitClient;
 import com.squareup.picasso.Picasso;
 
-import io.reactivex.Scheduler;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.functions.Consumer;
@@ -101,7 +99,7 @@ public class TodayWeatherFragment extends Fragment {
 
                         //Load image
                         Picasso.get().load(new StringBuilder("https://openweathermap.org/img/w/")
-                        .append(WeatherResult.getWeather().get(0).getIcon())
+                            .append(weatherResult.getWeather().get(0).getIcon())
                         .append(".png").toString()).into(img_weather);
 
                         //Load information
@@ -109,10 +107,10 @@ public class TodayWeatherFragment extends Fragment {
                         txt_city_name.setText(weatherResult.getName());
                         txt_description.setText(new StringBuilder("Погода в ")
                         .append(weatherResult.getName().toString()));
-                        txt_tempr.setText(new StringBuilder(String.valueOf(WeatherResult.getMain().getTemp())).append("°C").toString());
+                        txt_tempr.setText(new StringBuilder(String.valueOf(weatherResult.getMain().getTemp())).append("°C").toString());
                         txt_date_time.setText(Common.converterUnixToDate(weatherResult.getDt()));
-                        txt_pressure.setText(new StringBuilder(String.valueOf(WeatherResult.getMain().getPressure())).append(" гПа").toString());
-                        txt_humidity.setText(new StringBuilder(String.valueOf(WeatherResult.getMain().getPressure())).append(" %").toString());
+                        txt_pressure.setText(new StringBuilder(String.valueOf(weatherResult.getMain().getPressure())).append(" гПа").toString());
+                        txt_humidity.setText(new StringBuilder(String.valueOf(weatherResult.getMain().getPressure())).append(" %").toString());
                         txt_sunrise.setText(Common.converterUnixToHour(weatherResult.getSys().getSunrise()));
                         txt_sunset.setText(Common.converterUnixToHour(weatherResult.getSys().getSunset()));
                         txt_coords.setText(new StringBuilder(weatherResult.getCoord().toString()).toString());

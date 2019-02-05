@@ -1,6 +1,4 @@
 <resources>
-    <string name="app_name">ВВивОП</string>
+    <string name="app_name">My Application</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Today Weather Demo</string>
 </resources>

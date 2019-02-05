@@ -7,18 +7,18 @@ import java.util.Date;
 
 public class Common {
 
-    public static final String APP_ID = "11e70dfece2dae0b8a5a43422c26d348";
+    public static final String APP_ID = "7260cad761c0d25fa54f44ca5bb7882d";
     public static Location current_location = null;
 
-    public static String converterUnixToDate(long dt) {
+    public static String converterUnixToDate(int dt) {
 
         Date date = new Date(dt*1000L);
-        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm dd MM yyyy (EEE)");
+        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm dd.MM.yyyy (EEE)");
         String formatted = sdf.format(date);
         return formatted;
     }
 
-    public static String converterUnixToHour(long dt) {
+    public static String converterUnixToHour(int dt) {
 
         Date date = new Date(dt*1000L);
         SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");

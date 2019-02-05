@@ -43,7 +43,7 @@
                 android:layout_marginLeft="8dp"
                 android:textSize="50sp"
                 android:textStyle="bold"
-                android:text="14 C"
+                android:text="14 °C"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
@@ -94,7 +94,7 @@
                     android:layout_marginLeft="8dp"
                     android:layout_column="1"
                     android:id="@+id/txt_wind"
-                    android:text="Скорость: 1 Темп-а: 1"
+                    android:text="ϑ,м/с: 1 t,°C: 1"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"/>
 
