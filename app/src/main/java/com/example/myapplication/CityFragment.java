@@ -188,7 +188,6 @@ public class CityFragment extends Fragment {
             searchBar.setLastSuggestions(listCity);
 
             loading.setVisibility(View.GONE);
-            weather_panel.setVisibility(View.VISIBLE);
 
         }
 
