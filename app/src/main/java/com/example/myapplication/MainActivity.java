@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         //Request permission
         Dexter.withActivity(this)
@@ -120,6 +120,7 @@ public class MainActivity extends AppCompatActivity {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFragment(TodayWeatherFragment.getInstance(), "Сегодня");
         adapter.addFragment(ForecastFragment.getInstance(), "На 5 дней");
+        adapter.addFragment(CityFragment.getInstance(), "Города");
         viewPager.setAdapter(adapter);
 
     }
