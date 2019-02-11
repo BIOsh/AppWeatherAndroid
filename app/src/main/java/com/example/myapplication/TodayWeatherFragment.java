@@ -110,7 +110,7 @@ public class TodayWeatherFragment extends Fragment {
                         txt_tempr.setText(new StringBuilder(String.valueOf(weatherResult.getMain().getTemp())).append("°C").toString());
                         txt_date_time.setText(Common.converterUnixToDate(weatherResult.getDt()));
                         txt_pressure.setText(new StringBuilder(String.valueOf(weatherResult.getMain().getPressure())).append(" гПа").toString());
-                        txt_humidity.setText(new StringBuilder(String.valueOf(weatherResult.getMain().getPressure())).append(" %").toString());
+                        txt_humidity.setText(new StringBuilder(String.valueOf(weatherResult.getMain().getHumidity())).append(" %").toString());
                         txt_sunrise.setText(Common.converterUnixToHour(weatherResult.getSys().getSunrise()));
                         txt_sunset.setText(Common.converterUnixToHour(weatherResult.getSys().getSunset()));
                         txt_coords.setText(new StringBuilder(weatherResult.getCoord().toString()).toString());
